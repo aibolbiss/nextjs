@@ -1,16 +1,26 @@
 "use strict";
-let a = 5;
-let b = 'Aibol';
-let c = true;
-let d = ['Aibol', 'Erlan', 'Azamat'];
-d = d.map((item) => item.toUpperCase()); // AIBOL, ERLAN, AZAMAT
-let e = 5;
-e = 'Arman';
-function Test(a, b) {
-    return a + ' ' + b;
-}
-Test('Miras', 'Kaidarov'); // Miras Kaidarov
-const Test2 = (a) => {
-    return a * 2;
+const aibol = {
+    id: '1234',
+    size: {
+        width: 300,
+        height: 200,
+    }
 };
-Test2(3); // 6
+const erlan = {
+    id: 'a1b2c3',
+    color: 'yellow',
+    size: {
+        width: 600,
+        height: 300,
+    }
+};
+const azamat = {
+    id: 'azamat777',
+    size: {
+        width: 1000,
+        height: 500
+    },
+    print() {
+        return this.size.width * this.size.height;
+    }
+};

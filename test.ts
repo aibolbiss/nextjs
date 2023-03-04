@@ -1,24 +1,42 @@
-let a: number = 5
-
-let b: string = 'Aibol'
-
-let c: boolean = true
-
-let d: string[] = ['Aibol', 'Erlan', 'Azamat']
-
-d = d.map((item: string) => item.toUpperCase()) // AIBOL, ERLAN, AZAMAT
-
-let e: any = 5
-e = 'Arman'
-
-function Test(a:string, b: string): string | number {
-	return a + ' ' + b
+interface React {
+	readonly id: string  // readonly - данное поле только для чтения, изменить мы не можем
+	color?: string,      // ? - означает что данный параметр не обязательный 
+	size: {
+		width: number,
+		height: number
+	}
 }
 
-Test('Miras', 'Kaidarov') // Miras Kaidarov
-
-const Test2 = (a:number): number => {
-	return a * 2
+const aibol: React = {
+	id: '1234',
+	size: {
+		width: 300,
+		height: 200,
+	}
 }
 
-Test2(3) // 6
+const erlan: React = {
+	id: 'a1b2c3',
+	color: 'yellow',
+	size: {
+		width: 600,
+		height: 300,
+	}
+}
+
+// Наследование интерфейсов
+
+interface Vue extends React {
+	print: () => number
+}
+
+const azamat: Vue = {
+	id: 'azamat777',
+	size: {
+		width: 1000,
+		height: 500
+	},
+	print(): number {
+		return this.size.width * this.size.height
+	}
+}
