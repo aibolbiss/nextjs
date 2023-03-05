@@ -1,26 +1,20 @@
 "use strict";
-const aibol = {
-    id: '1234',
-    size: {
-        width: 300,
-        height: 200,
-    }
-};
-const erlan = {
-    id: 'a1b2c3',
-    color: 'yellow',
-    size: {
-        width: 600,
-        height: 300,
-    }
-};
-const azamat = {
-    id: 'azamat777',
-    size: {
-        width: 1000,
-        height: 500
-    },
-    print() {
-        return this.size.width * this.size.height;
-    }
-};
+var Direction1;
+(function (Direction1) {
+    Direction1[Direction1["Up"] = 0] = "Up";
+    Direction1[Direction1["Down"] = 1] = "Down";
+    Direction1[Direction1["Right"] = 2] = "Right";
+    Direction1[Direction1["Left"] = 3] = "Left";
+})(Direction1 || (Direction1 = {}));
+var Direction2;
+(function (Direction2) {
+    Direction2["Up"] = "UP";
+    Direction2["Down"] = "DOWN";
+    Direction2["Right"] = "RIGHT";
+    Direction2["LEft"] = "LEFT";
+})(Direction2 || (Direction2 = {}));
+function runEnum(obj) {
+    return obj.Up;
+}
+let text = runEnum(Direction2);
+console.log(text); // UP
